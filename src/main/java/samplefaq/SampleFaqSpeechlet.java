@@ -72,11 +72,11 @@ public class SampleFaqSpeechlet implements Speechlet {
 	}
 	
 	private SpeechletResponse getWelcomeResponse() {
-        String speechText = "Welcome to Farmers FAQ App";
+        String speechText = "Welcome to Sample FAQ App";
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
-        card.setTitle("Welcome to Farmers FAQ App");
+        card.setTitle("Welcome to Sample FAQ App");
         card.setContent(speechText);
 
         // Create the plain text output.
@@ -91,8 +91,8 @@ public class SampleFaqSpeechlet implements Speechlet {
     }
 	
     private SpeechletResponse getForgotLoginIntentResponse(IntentRequest request, Session session) {
-//        String speechText = "Trying to log into your My Farmers account, but can’t remember your username and password? Don’t worry; we can help recover your information, "
-//        					+"First Go to the My Farmers account recovery page, "
+//        String speechText = "Trying to log into your My Sample account, but can’t remember your username and password? Don’t worry; we can help recover your information, "
+//        					+"First Go to the My Sample account recovery page, "
 //        					+"Then Enter your policy number, last name, and date of birth, "
 //        					+"After that Answer a security question, "
 //        					+"Now you will Get your account information! ";
@@ -110,8 +110,8 @@ public class SampleFaqSpeechlet implements Speechlet {
     }
     
     private SpeechletResponse getReportLossIntentResponse(IntentRequest request, Session session) {
-//        String speechText = "After a car accident, home damage, or any kind of loss, it’s important to let your Farmers agent know, "
-//        					+"To get the claims process moving immediately though, call Farmers Claim Services at 1-800-435-7764.";
+//        String speechText = "After a car accident, home damage, or any kind of loss, it’s important to let your Sample agent know, "
+//        					+"To get the claims process moving immediately though, call Sample Claim Services at 1-800-435-7764.";
     	String speechText = sampleFaqDao.getFaqAnswer("ReportLossIntent");
         
         SimpleCard card = new SimpleCard();
@@ -125,10 +125,10 @@ public class SampleFaqSpeechlet implements Speechlet {
     }
     
     private SpeechletResponse getHelpIntentResponse(IntentRequest request, Session session) {
-        String speechText = "Hello there, you could ask me about Farmers Insurance Claims!";
+        String speechText = "Hello there, you could ask me about Sample Insurance Claims!";
 
         SimpleCard card = new SimpleCard();
-        card.setTitle("Hello there, you could ask me about Farmers Insurance Claims!");
+        card.setTitle("Hello there, you could ask me about Sample Insurance Claims!");
         card.setContent(speechText);
 
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
