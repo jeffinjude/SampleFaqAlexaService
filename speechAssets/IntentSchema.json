@@ -1,0 +1,33 @@
+{
+  "intents": [
+    {
+      "intent": "ForgotLoginIntent",
+      "slots": [
+        {
+          "name": "credentialSlot",
+          "type": "credentialType"
+        },
+        {
+          "name": "forgotLoginSlot",
+          "type": "forgotLoginType"
+        }
+      ]
+    },
+    {
+      "intent": "ReportLossIntent",
+      "slots": [
+        {
+          "name": "reportSlot",
+          "type": "reportType"
+        },
+        {
+          "name": "lossSlot",
+          "type": "lossType"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

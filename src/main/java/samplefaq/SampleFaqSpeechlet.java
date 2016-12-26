@@ -23,7 +23,7 @@ public class SampleFaqSpeechlet implements Speechlet {
 	private static final Logger log = LoggerFactory.getLogger(SampleFaqSpeechlet.class);
 	
 	SampleFaqDao sampleFaqDao = new SampleFaqDao();
-	String invalidSpeechText = "Sorry I could not find the answer for your query";
+	String invalidSpeechText = "Something went wrong, Sorry I could not find the answer for your query.";
 	
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
         log.info("onIntent requestId={}, sessionId={}", request.getRequestId(),
@@ -49,13 +49,16 @@ public class SampleFaqSpeechlet implements Speechlet {
 //        else {
 //            throw new SpeechletException("Invalid Intent");
 //        }
-        
-        switch(intentName){
-        	case "ForgotLoginIntent" : return getForgotLoginIntentResponse(request,session);
-        	case "ReportLossIntent" : return getReportLossIntentResponse(request,session);
-        	case "AMAZON.HelpIntent" : return getHelpIntentResponse(request,session);
-        	case "InvalidIntent" : return getInvalidIntentResponse(request,session);
-        	default : throw new SpeechletException("Invalid Intent");
+        try{
+	        switch(intentName){
+	        	case "ForgotLoginIntent" : return getForgotLoginIntentResponse(request,session);
+	        	case "ReportLossIntent" : return getReportLossIntentResponse(request,session);
+	        	case "AMAZON.HelpIntent" : return getHelpIntentResponse(request,session);
+	        	default : throw new SpeechletException("Invalid Intent");
+	        }
+        }
+        catch(Exception e){
+        	return getInvalidIntentResponse(request,session);
         }
 	}
 
@@ -149,4 +152,5 @@ public class SampleFaqSpeechlet implements Speechlet {
 
         return SpeechletResponse.newTellResponse(speech, card);
     }
+    
 }

@@ -1,0 +1,12 @@
+ForgotLoginIntent I {forgotLoginSlot} my {credentialSlot} How do I log in
+ForgotLoginIntent I {forgotLoginSlot} my {credentialSlot} How can I log in
+ForgotLoginIntent I {forgotLoginSlot} my {credentialSlot} How could I log in
+ForgotLoginIntent How do I log in I {forgotLoginSlot} my {credentialSlot}
+ForgotLoginIntent How can I log in I {forgotLoginSlot} my {credentialSlot}
+ForgotLoginIntent How could I log in I {forgotLoginSlot} my {credentialSlot}
+
+ReportLossIntent Who should I call to {reportSlot} a {lossSlot}
+ReportLossIntent How can I {reportSlot} a {lossSlot}
+ReportLossIntent How to {reportSlot} a {lossSlot}
+ReportLossIntent How could I {reportSlot} a {lossSlot}
+ReportLossIntent How do we {reportSlot} a {lossSlot}

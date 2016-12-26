@@ -1,0 +1,4 @@
+credentialType : username|password|username and password|credentials
+forgotLoginType : forgot|do not remember|don't remember|cannot find|can't find|lost my|do not have|don't have
+lossType : loss
+reportType : report
