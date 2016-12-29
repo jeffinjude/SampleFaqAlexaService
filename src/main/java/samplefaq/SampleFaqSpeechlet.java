@@ -54,6 +54,7 @@ public class SampleFaqSpeechlet implements Speechlet {
 	        	case "ForgotLoginIntent" : return getForgotLoginIntentResponse(request,session);
 	        	case "ReportLossIntent" : return getReportLossIntentResponse(request,session);
 	        	case "AMAZON.HelpIntent" : return getHelpIntentResponse(request,session);
+	        	case "Unhandled" : return getInvalidIntentResponse(request,session);
 	        	default : throw new SpeechletException("Invalid Intent");
 	        }
         }

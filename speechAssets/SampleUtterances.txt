@@ -10,3 +10,7 @@ ReportLossIntent How can I {reportSlot} a {lossSlot}
 ReportLossIntent How to {reportSlot} a {lossSlot}
 ReportLossIntent How could I {reportSlot} a {lossSlot}
 ReportLossIntent How do we {reportSlot} a {lossSlot}
+
+Unhandled I
+Unhandled How
+Unhandled Who
